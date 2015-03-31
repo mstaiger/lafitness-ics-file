@@ -1,0 +1,1 @@
+# lafitness-ics-file
