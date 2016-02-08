@@ -8,7 +8,10 @@ from sys import argv
 import urllib2
 import re
 
-clubid = argv[1]
+if len(argv) is 1:
+	clubid = '469'
+else:
+    clubid = argv[1]
 url = 'http://lafitness.com/Pages/ClassSchedulePrintVersion.aspx?clubid=' + clubid
 response = urllib2.urlopen(url)
 html_doc = response.read()
@@ -27,7 +30,7 @@ def dayoffset(today,dayofweek):
 
 soup = BeautifulSoup(html_doc, 'html.parser')
 [span.extract() for span in soup.find_all('span',attrs={'class':'required'})]
-addrblock = soup.find('td',attrs={'class':'h5'}).string.strip().splitlines()
+addrblock = soup.find('div',attrs={'style':'font-size: 12px !important; vertical-align: bottom !important;'}).string.strip().splitlines()
 tableblock = soup.find('table',attrs={'id':'tblSchedule'})
 
 location = {}
