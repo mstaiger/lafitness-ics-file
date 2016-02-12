@@ -8,6 +8,8 @@ from sys import argv
 import urllib2
 import re
 
+#test
+
 if len(argv) is 1:
 	clubid = '469'
 else:
