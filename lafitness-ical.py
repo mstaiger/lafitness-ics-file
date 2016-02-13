@@ -8,8 +8,6 @@ from sys import argv
 import urllib2
 import re
 
-#test
-
 if len(argv) is 1:
 	clubid = '469'
 else:
@@ -112,31 +110,3 @@ END:VEVENT\
 
 cal += "\nEND:VCALENDAR"
 print cal
-# #[div.extract() for div in soup.find_all('div',attrs={'class':'subClsOldClsInfoTxt'})]
-
-# print address.string.strip()
-# regex = re.compile(r'[\t\n\r]',re.MULTILINE)    # Strip out tabs, newlines, carriage returns
-# newstring = re.sub(regex,'',address.string.strip().title()) 
-# print newstring
-# newstring = re.sub(r'\s{2,}',' ',newstring)     # Strip out more than two consecutive spaces 
-# print newstring
-# newstring = re.sub(r',',', ',newstring)         # Add a space after each comma
-# print newstring
-# newstring = re.sub(r'(?P<zip>\d{5})-','\g<zip> ',newstring)
-# callback = lambda pat: pat.group(0).upper()
-# print re.sub(r',\s([A-z]{2})\s',callback,newstring.title())
-# quit()
-
-#print html_doc.decode('utf-8')
-#diagnose(html_doc.decode('utf-8')).encode('utf-8')
-
-#    		if re.search(r'[A-Z]{2}$',addr[thing]):
-#		print addr[thing].strip()
-#	else:
-#	    print re.sub(r'\t','',addr[thing].title().strip())
-
-#        	header = column.find_all('h5')
-#           print header
-#        	if header.string is not None:
-#        		print header
-        		#print header.string.encode('utf-8').strip()
